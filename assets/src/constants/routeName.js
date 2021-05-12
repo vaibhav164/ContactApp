@@ -1,4 +1,4 @@
-export const CONTACT="contacts";
+export const HOME="Home";
 export const LOGIN="Login";
 export const SIGNUP="SignUp";
 export const DETAIL="Details";

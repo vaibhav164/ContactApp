@@ -2,7 +2,7 @@ import React from "react";
 import { createStackNavigator } from '@react-navigation/stack';
 import { Text, View } from 'react-native';
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { CONTACT, CREATE, DETAIL, SETTING } from "../constants/routeName";
+import { CREATE, DETAIL, HOME, SETTING } from "../constants/routeName";
 
 const Home=({navigation})=>{
     return(
@@ -45,7 +45,7 @@ const HomeStackNavigator=()=>{
     const HomeStack=createStackNavigator();
     return(
             <HomeStack.Navigator>
-                <HomeStack.Screen name={CONTACT} component={Home} />
+                <HomeStack.Screen name={HOME} component={Home} />
                 <HomeStack.Screen name={DETAIL} component={contactDetails} />
                 <HomeStack.Screen name={CREATE} component={createContact} />
                 <HomeStack.Screen name={SETTING} component={setting} />
