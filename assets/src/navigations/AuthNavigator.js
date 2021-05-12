@@ -2,21 +2,22 @@ import React from "react";
 import { createStackNavigator } from '@react-navigation/stack';
 import { Text, View } from 'react-native';
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { LOGIN, SIGNUP} from "../constants/routeName";
 
-const Login=({navigation})=>{
+const Authentication=({navigation})=>{
     return(
         <View>
-            <TouchableOpacity onPress={()=>{navigation.navigate('signup')}}>
+            <TouchableOpacity onPress={()=>{navigation.navigate('SignUp')}}>
                 <Text>Login</Text>
             </TouchableOpacity>
         </View>
     );
 }
 
-const signUp=({navigation})=>{
+const Registeration=({navigation})=>{
     return(
         <View>
-            <TouchableOpacity onPress={()=>{navigation.navigate('login')}}>
+            <TouchableOpacity onPress={()=>{navigation.navigate('Login')}}>
                 <Text>SignUp</Text>
             </TouchableOpacity>
         </View>
@@ -26,8 +27,8 @@ const AuthNavigator=()=>{
     const AuthStack=createStackNavigator();
     return(
             <AuthStack.Navigator>
-                <AuthStack.Screen name="login" component={Login} />
-                <AuthStack.Screen name="signup" component={signUp} />
+                <AuthStack.Screen name={LOGIN} component={Authentication} />
+                <AuthStack.Screen name={SIGNUP} component={Registeration} />
             </AuthStack.Navigator>
     );
 }
