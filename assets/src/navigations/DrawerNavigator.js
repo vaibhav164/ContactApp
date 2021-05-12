@@ -7,7 +7,7 @@ const DrawerNavigator=()=>{
     return(
             <AuthStack.Navigator>
                 <AuthStack.Screen name="Home" component={HomeStackNavigator} />
-                <AuthStack.Screen name="Authentication" component={AuthNavigator} />
+                {/* <AuthStack.Screen name="Authentication" component={AuthNavigator} /> */}
             </AuthStack.Navigator>
     );
 }

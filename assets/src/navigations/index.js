@@ -4,9 +4,10 @@ import HomeStackNavigator from "./HomeNavigator";
 import DrawerNavigator from "./DrawerNavigator";
 
 const AppNavContainer=()=>{
+    const isLogin=true;
     return(
         <NavigationContainer>
-           <DrawerNavigator />
+           {isLogin?DrawerNavigator:AuthNavigator}
         </NavigationContainer>
     );
 }
